@@ -1,38 +1,170 @@
 .App {
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 0; 
+  background-color: #fff; 
+}
+
+.header-title {
+  background-color: #194f3e; 
+  color: #f9a602; 
+  padding: 20px 40px; 
+  border-radius: 0 0 10px 10px; 
+  font-size: 35pt;
+}
+
+.logo {
+  max-height: 100px; 
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  padding: 20px 40px; 
+  background-color: #f8f8f8; 
+  border-radius: 10px; 
+  margin-top: 20px; 
+}
+
+.date-section,
+.time-section,
+.occasion-section,
+.button-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.date-section label,
+.time-section label,
+.occasion-section label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.date-section input,
+.time-section select,
+.occasion-section select {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button-section .book-button {
+  padding: 12px 20px; 
+  font-size: 18px; 
+  background-color: #194f3e; 
+  color: #f9a602; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center; 
+}
+
+.name-section,
+.phone-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.name-section label,
+.phone-section label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.name-section input,
+.phone-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.guests-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.guests-section label {
+  font-size: 18px;
+  margin-right: 10px;
+  flex: 0.7; 
+}
+
+.guests-section input {
+  flex: 0.3; 
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+.success-message {
+  background-color: #f9a602; /* Yellow background for the message */
+  color: #194f3e; /* Dark green text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-button {
+  background-color: #194f3e; /* Dark green background for the close button */
+  color: #f9a602; /* Yellow text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
 }
